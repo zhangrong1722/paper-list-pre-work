@@ -6,7 +6,7 @@ AlextNet在2012年提出来的，而SPPNet是在14年被ECCV Accepted，是一�
 
 卷积层允许任何尺寸图像输入，全连接层要求输入是固定维度的，paper的做法是在最后一层卷积层和全连接层之间加入SSP层，SSP层的目的是在输入特征图是任何尺寸的情况下，都输出固定维度的特征图。示意图如下图所示：
 
-<img src="/Users/estelle/Documents/DL/Code/paper-list-pre-work/asserts/sppnet.png" alt="sppnet" style="zoom:40%;" />
+<img src="../asserts/sppnet.png" alt="sppnet" style="zoom:40%;" />
 
 对于任意尺寸的特征图，paper的做法是将特征图都分成n\*n个子图，再对每个子图执行全局均值/最大池化操作，最终得到的维度是n\*n，设输入特征图的channel数是K，则SSP层输出的特征维度是（n\*n\*K），paper还采用了多尺度，来加强特征提取能力。paper使用三组尺度：6\*6、3\*3和1\*1，1\*1实际上就相当于直接对特征图执行全局池化。
 
