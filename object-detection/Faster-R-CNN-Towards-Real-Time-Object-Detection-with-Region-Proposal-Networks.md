@@ -8,7 +8,9 @@ RPN本质依旧是CNN，输入一张图像，CNN提取得到特征图之后，�
 
 到此，faster r-cnn中的所有工作均是由CNN完成。但是，proposals提取和object detection（Detector）这两个阶段内部是end-to-end的，但是两个阶段之间仍旧不是end-to-end。为此，paper中介绍了两种训练方式：1）RPN和Detector交替训练；2）RPN和Detector联合训练。
 
-<img src="../asserts/faster r-cnn.png" style="zoom:30%;" />
+<img src="../asserts/faster-r-cnn.png" style="zoom:30%;" />
 
-<img src="../asserts/faster r-cnn-anchors.png" style="zoom:40%;" />
+<img src="../asserts/faster-r-cnn-anchors.png" style="zoom:40%;" />
+
+
 
